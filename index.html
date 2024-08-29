@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="clock()">
+    <h1></h1>
+    <!-- <h2>Lorem ipsum dolor sit amet.</h2>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <h4>Lorem ipsum dolor sit amet.</h4> -->
+    <script>
+        function clock(){
+            var date=new Date();
+            var hr=date.getHours();
+            var min=date.getMinutes();
+            var sec=date.getSeconds();
+            var time=hr+":"+ min+":"+sec;
+            document.getElementsByTagName('h1')[0].innerText=time;
+            
+            setTimeout(clock,1000);
+
+        }
+        
+    </script>
+</body>
+</html>
